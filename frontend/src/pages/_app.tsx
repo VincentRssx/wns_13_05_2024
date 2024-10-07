@@ -1,10 +1,9 @@
-import "@/styles/globals.css";
+import React from "react";
 import type { AppProps } from "next/app";
-import dynamic from "next/dynamic";
+import "../styles/style.css";
 
-function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const MyApp = ({ Component, pageProps }: AppProps) => {
+	return <Component {...pageProps} />;
+};
 
-// Disabling SSR
-export default dynamic(() => Promise.resolve(App), { ssr: false });
+export default MyApp;
